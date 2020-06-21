@@ -100,12 +100,6 @@ function wc_refresh_mini_cart_items($fragments){
     ob_start();
     ?>
     <ul class="woocommerce-mini-cart cart_list product_list_widget mini-cart-list">
-        <?php
-       // print_r(WC()->cart->get_cart());
-
-        foreach( WC()->cart->get_cart() as $cart_item ){
-            ?>
-        <li>
             <?php
     if ( WC()->cart->is_empty() ) {
         echo '<span class="no-items-mini">No items added</span>';
@@ -114,24 +108,43 @@ function wc_refresh_mini_cart_items($fragments){
         $cart_total = WC()->cart->cart_contents_total;
         foreach(WC()->cart->get_cart() as $cart_item ) {
             $_product = $cart_item['data'];
-            $link = $_product->get_permalink();
-            echo '<span>';
-            echo $cart_item['quantity'].' x <a href="'.$link.'">'.$_product->get_title();
-            echo '<a/></span>';
+            $product_link = $_product->get_permalink();
             $price = $_product->get_price();
-            echo "  Price: " . $currency . $price . "<br>";
+            $product_title = $_product->get_title();
+            echo "<li>";
+            echo "<span>".$product_title."</span>";
+            echo "<span class='quanity'>".$cart_item['quantity']." x "."</span>"."<strong>  Price: </strong>" ."<span>" . $currency . $price . "</span>" ;
+             echo "<a href=".$product_link.">";
             echo $_product->get_image();
+            echo "</a>";
+             echo "</li>";
         }
-    echo "<span class='mini-total'><b>Total: </b>". $currency . $cart_total ."</span>";
+  
     }
              ?>
-        </li>
-        <?php } ?>
     </ul>
+
     <?php
+    add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_subtotal');
+function wc_refresh_mini_cart_subtotal($fragments){
+    ob_start();
+    ?>
+    <p class="woocommerce-mini-cart__total total">
+        <?php 
+ echo "<strong>Total: </strong>". $currency . $cart_total;
+        ?>
+    </p>
+    <?php
+        $fragments['.woocommerce-mini-cart__total total'] = ob_get_clean();
+    return $fragments;
+}
+
+
         $fragments['.mini-cart-list'] = ob_get_clean();
     return $fragments;
 }
+
+
 
 /*wiget areas*/
 function my_register_sidebars() {
