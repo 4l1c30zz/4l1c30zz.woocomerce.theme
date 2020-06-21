@@ -68,12 +68,34 @@ function theme_scripts(){
   $themecsspath = get_stylesheet_directory() . '/assets/js/anime.min.js';
   wp_enqueue_script('animate' ,get_template_directory_uri() . '/assets/js/anime.min.js', array(), $style_ver, true);
   $themecsspath = get_stylesheet_directory() . '/assets/js/main.js';
+  
   wp_enqueue_script('main' ,get_template_directory_uri() . '/assets/js/main.js', array(), $style_ver, true);
   $themecsspath = get_stylesheet_directory() . '/assets/js/woo.js';
   wp_enqueue_script('woo' ,get_template_directory_uri() . '/assets/js/woo.js', array('jquery'), $style_ver, true);
+    wp_enqueue_script('fontAwesome' , 'https://kit.fontawesome.com/efa9a3e947.js', array(), 1.0, true);
+
+  wc_enqueue_js( "
+        $.ajax({
+            url: '".admin_url('admin-ajax.php')."',
+            data: {
+                'action': 'cart_count'
+            },
+            success: function(response) {
+                $('#cart_counter').text(response);
+            }
+        });
+    ");
 
 }
 add_action('wp_enqueue_scripts','theme_scripts');
+
+//woo add counter to minicart
+add_action('wp_ajax_cart_count', 'custom_cart_count');
+add_action('wp_ajax_nopriv_cart_count', 'custom_cart_count');
+function custom_cart_count() {
+    echo WC()->cart->cart_contents_count;
+    wp_die();
+}
 
 /*wiget areas*/
 function my_register_sidebars() {
@@ -179,6 +201,7 @@ add_action('woocommerce_before_single_product_summary', 'new_title', 5 );
 function new_title() {
      the_title( '<h1 class="product_title entry-title">', '</h1>' );
 }
+
 //remove add to cart from woo archive
 add_action( 'woocommerce_after_shop_loop_item', function(){
 	remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
@@ -224,29 +247,5 @@ function my_acf_block_render_callback( $block ) {
 	}
 }
 
-
-add_action('acf/init', 'my_cpt_caf_init');
-function my_cpt_caf_init() {
-
-	if( function_exists('acf_register_block') ) {
-
-		// register a testimonial block
-		acf_register_block(array(
-			'name'				=> 'post-type-project',
-			'title'				=> __('project CPT'),
-			'description'		=> __('A cpt pholio block'),
-			'render_callback'	=> 'my_cpt_block_render_callback',
-			'category'			=> 'common',
-			'icon'				=> 'admin-comments',
-			'keywords'			=> array( 'pholio', 'smiley' ),
-		));
-	}
-}
-function my_cpt_block_render_callback( $block ) {
-	$slug = str_replace('acf/', '', $block['name']);
-	if( file_exists( get_theme_file_path("/assets/template-parts/block/content-{$slug}.php") ) ) {
-		include( get_theme_file_path("/assets/template-parts/block/content-{$slug}.php") );
-	}
-}
 
 ?>

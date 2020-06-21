@@ -35,6 +35,15 @@
                 );
                 ?>
             </nav>
+                      <div class="cart">
+            <div class="cart_icon_wrap">
+              <i class="fas fa-shopping-cart"></i>
+            <span id="cart_counter"></span>
+              </div>
+            <div class="inner_cart_wrap">
+            <?php woocommerce_mini_cart( [ 'list_class' => 'mini-cart-list' ] ); ?>
+              </div>
+          </div>
           </div>
         </header>
     <div id="main" class="page_wrapper">

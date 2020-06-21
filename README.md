@@ -1,1 +1,1 @@
-# pholio_theme
+# woocomerce store
