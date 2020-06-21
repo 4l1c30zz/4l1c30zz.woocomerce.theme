@@ -7,4 +7,6 @@ $(".woocommerce-NoticeGroup").toggleClass("min");
 console.log(this);
 });
     });
+    $(document.body).trigger('wc_fragment_refresh');
+    
 });

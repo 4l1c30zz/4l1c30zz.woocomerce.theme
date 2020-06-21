@@ -74,27 +74,63 @@ function theme_scripts(){
   wp_enqueue_script('woo' ,get_template_directory_uri() . '/assets/js/woo.js', array('jquery'), $style_ver, true);
     wp_enqueue_script('fontAwesome' , 'https://kit.fontawesome.com/efa9a3e947.js', array(), 1.0, true);
 
-  wc_enqueue_js( "
-        $.ajax({
-            url: '".admin_url('admin-ajax.php')."',
-            data: {
-                'action': 'cart_count'
-            },
-            success: function(response) {
-                $('#cart_counter').text(response);
-            }
-        });
-    ");
-
 }
 add_action('wp_enqueue_scripts','theme_scripts');
 
 //woo add counter to minicart
-add_action('wp_ajax_cart_count', 'custom_cart_count');
-add_action('wp_ajax_nopriv_cart_count', 'custom_cart_count');
-function custom_cart_count() {
-    echo WC()->cart->cart_contents_count;
-    wp_die();
+add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
+function wc_refresh_mini_cart_count($fragments){
+    ob_start();
+    ?>
+    <div id="cart_counter">
+        <?php echo WC()->cart->get_cart_contents_count();
+      /*  echo ("<pre>");
+        print_r(WC()->cart);
+        echo ("</pre>");*/
+        ?>
+    </div>
+    <?php
+        $fragments['#cart_counter'] = ob_get_clean();
+    return $fragments;
+}
+
+
+add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_items');
+function wc_refresh_mini_cart_items($fragments){
+    ob_start();
+    ?>
+    <ul class="woocommerce-mini-cart cart_list product_list_widget mini-cart-list">
+        <?php
+       // print_r(WC()->cart->get_cart());
+
+        foreach( WC()->cart->get_cart() as $cart_item ){
+            ?>
+        <li>
+            <?php
+    if ( WC()->cart->is_empty() ) {
+        echo '<span class="no-items-mini">No items added</span>';
+    } else {
+        $currency = get_woocommerce_currency_symbol();
+        $cart_total = WC()->cart->cart_contents_total;
+        foreach(WC()->cart->get_cart() as $cart_item ) {
+            $_product = $cart_item['data'];
+            $link = $_product->get_permalink();
+            echo '<span>';
+            echo $cart_item['quantity'].' x <a href="'.$link.'">'.$_product->get_title();
+            echo '<a/></span>';
+            $price = $_product->get_price();
+            echo "  Price: " . $currency . $price . "<br>";
+            echo $_product->get_image();
+        }
+    echo "<span class='mini-total'><b>Total: </b>". $currency . $cart_total ."</span>";
+    }
+             ?>
+        </li>
+        <?php } ?>
+    </ul>
+    <?php
+        $fragments['.mini-cart-list'] = ob_get_clean();
+    return $fragments;
 }
 
 /*wiget areas*/

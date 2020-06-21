@@ -35,7 +35,7 @@
                 );
                 ?>
             </nav>
-                      <div class="cart">
+           <div class="cart">
             <div class="cart_icon_wrap">
               <i class="fas fa-shopping-cart"></i>
             <span id="cart_counter"></span>
