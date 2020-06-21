@@ -1,0 +1,26 @@
+@function font($key) {
+  @if not map-has-key($fonts, $key) {
+    @warn "Key `#{$key}` not found in $colors map.";
+  }
+  @return map-get($fonts, $key);
+}
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+    @warn "Key `#{$key}` not found.";
+
+}
+
+@function font_size($key) {
+  @if not map-has-key($font_sizes, $key) {
+    @warn "Key `#{$key}` not found.";
+  }
+  @return map-get($font_sizes, $key);
+}
+
+@function font_weight($key) {
+  @if not map-has-key($font_weights, $key) {
+    @warn "Key `#{$key}` not found.";
+  }
+  @return map-get($font_weights, $key);
+}

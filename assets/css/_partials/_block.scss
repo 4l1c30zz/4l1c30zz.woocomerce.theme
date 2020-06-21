@@ -1,0 +1,140 @@
+/*block styles*/
+%proj_btn {
+    text-align: center;
+    display: block;
+    flex-basis: 50%;
+    color: color(_gray);
+    font: font_size(f16) font(lined_font);
+    padding: 10px;
+    transition: $trans_default;
+    &:hover {
+        border: 2px solid color(_gray);
+        color: color(_gray);
+        background: color(_white);
+    }
+}
+.proj_row_wrap {
+    @include flex(space-around , center , row);
+    flex-wrap: wrap;
+    > div {
+        flex-basis: calc(33.33% - 20px);
+        margin: 10px;
+    }
+    .single_i_wrap {
+        height: 100%;
+    }
+    .proj_wrapper {
+        @include flex(center , center , row);
+        height: 100%;
+        min-height: 60vh;
+        max-height: 100%;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        border: 5px solid black;
+        background: color(_white);
+        > a {
+            display: block;
+            height: 100%;
+        }
+        .media {
+            height: 100%;
+            display: flex;
+        }
+        img {
+            max-width: 100%;
+            height: 100%;
+            min-height: 61vh;
+            object-fit: cover;
+            object-position: center;
+        }
+        .media:after {
+            background: url("/wp-content/uploads/2020/05/whitenoise-400x400-1.jpg");
+            opacity: 0.7;
+            content: "";
+            height: 300%;
+            left: -50%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        &:hover .media:after {
+            position: absolute;
+            top: -100%;
+            width: 300%;
+            opacity: 0.5;
+            animation: grain 8s steps(10) infinite;
+        }
+        .copy {
+            height: 0;
+            max-height: 90%;
+            position: absolute;
+            left: auto;
+            top: 5%;
+            overflow: hidden;
+            @include flex(center , center , column);
+            .copy-hd {
+                position: relative;
+                z-index: 2;
+                display: block;
+                padding: $inner_padd;
+            }
+            .copy-bd {
+                @include flex(flex-start , center , row );
+                flex-wrap: wrap;
+                align-content: flex-start;
+                .mark {
+                    background: color(_yellow);
+                  }
+                p {
+                    z-index: 2;
+                    position: relative;
+                    padding: $inner_padd;
+                    margin-bottom: 0;
+                    line-height: 1em;
+                }
+            }
+        }
+        .row_wrap {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+            .mark {
+                width: 0;
+                overflow: hidden;
+                height: 100%;
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                background: color(_magenta);
+            }
+        }
+        .inner_link {
+            display: block;
+            position: absolute;
+            bottom: 1vh;
+            font: font_weight(boldest) font_size(f18) font(lined_font);
+            background: color(_blue);
+            padding: 5px;
+        }
+    }
+}
+.proj_links {
+    @include flex( center , space-between , row);
+    width: 100%;
+    margin: 5px auto;
+    a.primary {
+        @extend %proj_btn;
+        border: 2px solid color(_magenta);
+        color: color(_white);
+        background: color(_magenta);
+        margin-right: 5px;
+    }
+    a.secondary {
+        @extend %proj_btn;
+        border: 2px solid color(_yellow);
+        color: color(_gray);
+        background: color(_yellow);
+    }
+}
