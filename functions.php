@@ -112,11 +112,13 @@ function wc_refresh_mini_cart_items($fragments){
             $price = $_product->get_price();
             $product_title = $_product->get_title();
             echo "<li>";
-            echo "<span>".$product_title."</span>";
-            echo "<span class='quanity'>".$cart_item['quantity']." x "."</span>"."<strong>  Price: </strong>" ."<span>" . $currency . $price . "</span>" ;
-             echo "<a href=".$product_link.">";
+
+            echo "<div class='price'>"."<span class='quanity'>".$cart_item['quantity']."</span>" ." x " ."<span class='amnount'>" . $currency . $price . "</span></div>";
+            echo "<span class='product_name'>".$product_title."</span>";
+            echo "<a href='".$product_link."'>";
             echo $_product->get_image();
             echo "</a>";
+      
              echo "</li>";
         }
   
