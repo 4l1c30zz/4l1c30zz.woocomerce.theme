@@ -410,55 +410,12 @@ button,
 	@include cont_width;
 	@include flex(center, center, column);
 	min-height: 95vh;
-
-	.wp-block-columns {
-		@include flex(start, center, row);
-		width: 100%;
-
-		>div {
-			@include flex(start, center, column);
-			width: 100%;
-		}
-	}
-
-	#development {
-		margin: 40px auto 20px;
-	}
-
-	#art {
-		margin: 20px auto;
-	}
-
-	#shop {
-		margin: 20px auto;
-	}
-
-	#contact {
-		margin: 30px auto 0;
-	}
+	
 
 	.mail_link a {
 		font-size: font_size(f40);
 		text-decoration: underline;
 		margin-bottom: 20px;
-	}
-
-	.about {
-		margin: 10px auto 20px;
-		width: 90%;
-	}
-
-	.about .wp-block-column {
-		justify-content: center;
-		align-items: center;
-		align-content: center;
-		padding: 20px;
-	}
-
-	.about p {
-		font: font_weight(medium) font_size(f20) font(base_font);
-		text-transform: uppercase;
-		line-height: 1.2em;
 	}
 }
 
@@ -581,31 +538,11 @@ button,
 			color: color(_white);
 		}
 
-		.client {
-			display: block;
-			margin-bottom: 20px;
-		}
-
 		.txt {
 			padding: 10px;
 			background: yellow;
 			margin-right: 5px;
 			font-weight: 700;
-		}
-
-		.tech {
-			margin-bottom: 20px;
-		}
-
-		.link_wrap {
-			display: flex;
-			justify-content: space-around;
-
-			a {
-				font-size: font_size(f20);
-				font-weight: 700;
-				text-transform: uppercase;
-			}
 		}
 	}
 }
@@ -736,5 +673,9 @@ body.single:not(.woocommerce-page) {
 .wc-block-grid__product-add-to-cart a.added::after {
 	display: none;
 }
+
+
+
+
 
 @import "_partials/_media";

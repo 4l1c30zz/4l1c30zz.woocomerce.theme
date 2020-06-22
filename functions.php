@@ -280,17 +280,17 @@ function my_acf_init() {
 	if( function_exists('acf_register_block') ) {
 
 		acf_register_block(array(
-			'name'				=> 'project',
-			'title'				=> __('project'),
-			'description'		=> __('A custom pholio block'),
-			'render_callback'	=> 'my_acf_block_render_callback',
+			'name'				=> 'woo-categories',
+			'title'				=> __('woo categories'),
+			'description'		=> __('A woocomerce block'),
+			'render_callback'	=> 'woo_categories_render_callback',
 			'category'			=> 'common',
 			'icon'				=> 'admin-comments',
 			'keywords'			=> array( 'pholio', 'smiley' ),
 		));
 	}
 }
-function my_acf_block_render_callback( $block ) {
+function woo_categories_render_callback( $block ) {
 
 	$slug = str_replace('acf/', '', $block['name']);
 	if( file_exists( get_theme_file_path("/assets/template-parts/block/content-{$slug}.php") ) ) {
