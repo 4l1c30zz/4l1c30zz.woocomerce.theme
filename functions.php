@@ -298,5 +298,24 @@ function woo_categories_render_callback( $block ) {
 	}
 }
 
+//acf blocks admin view fx
+function my_acf_admin_head() {
+?>
+<style type="text/css">
+.acf-block-preview .wp-block-columns{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.acf-block-preview .wp-block-columns > div{
+    flex-basis: calc(33.33% - 40px);
+    margin: 20px;
+    flex-grow: 0;
+}
+</style>
+<?php
+}
 
+add_action('acf/input/admin_head', 'my_acf_admin_head');
 ?>
