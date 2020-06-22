@@ -28,7 +28,16 @@ img{max-width:100%}
 .proj_links{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;width:100%;margin:5px auto}
 .proj_links a.primary{border:2px solid #ec008c;color:#fff;background:#ec008c;margin-right:5px}
 .proj_links a.secondary{border:2px solid #faff00;color:#1a181b;background:#faff00}
-.woocommerce-store-notice.demo_store{position:fixed;bottom:0;background:black;color:white;font-size:20px;text-align:center;padding:20px 10px;left:0;width:100%;font-weight:bold;text-transform:uppercase;z-index:999}
+.category_wraper>.woo-category-block a{text-align:center;display:block;width:auto}
+.category_wraper>.woo-category-block a img{-webkit-transition:all .3s ease;transition:all .3s ease;-webkit-transform:scale(0.8);transform:scale(0.8);-webkit-filter:grayscale(100%);filter:grayscale(100%)}
+.category_wraper>.woo-category-block a:hover img{-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-filter:grayscale(0);filter:grayscale(0)}
+.category_wraper>.woo-category-block a:hover h3{-webkit-transform:rotate(-10deg) scale(1.1);transform:rotate(-10deg) scale(1.1)}
+.category_wraper>.woo-category-block a h3{display:inline-block;padding:10px;-webkit-transition:all .3s ease;transition:all .3s ease;-webkit-transform:rotate(0) scale(1);transform:rotate(0) scale(1)}
+.category_wraper>.woo-category-block:nth-child(3n -1) h3{color:white;background:#000300}
+.category_wraper>.woo-category-block:nth-child(3n) h3{background:#faff00}
+.category_wraper>.woo-category-block:nth-child(3n -2) h3{color:white;background:#02a9ea}
+.wc-block-grid__product-price.price{background:#000300;color:white;padding:10px}
+.woocommerce-store-notice.demo_store{position:fixed;bottom:0;background:#000300;color:white;font-size:20px;text-align:center;padding:20px 10px;left:0;width:100%;font-weight:bold;text-transform:uppercase;z-index:999}
 .woocommerce-store-notice.demo_store a{display:block;padding:10px 0 0;font-size:25px}
 .woocommerce-error{background:#faff00;padding:10px;font-size:18px}
 .woocommerce-error a{float:right;background:transparent;color:#000300 !important;margin:0 10px !important;padding:0 !important}

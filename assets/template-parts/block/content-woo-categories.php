@@ -12,7 +12,7 @@ $prod_categories = get_terms( 'product_cat', array(
         'hide_empty' => true
     ));
 ?>
-   <div class="wp-block-columns are-vertically-aligned-center has-3-columns"> 
+   <div class="wp-block-columns are-vertically-aligned-center has-3-columns category_wraper"> 
 <?php
     foreach( $prod_categories as $prod_cat ) :
         $cat_thumb_id = get_woocommerce_term_meta( $prod_cat->term_id, 'thumbnail_id', true );
@@ -20,7 +20,7 @@ $prod_categories = get_terms( 'product_cat', array(
         $term_link = get_term_link( $prod_cat, 'product_cat' );
         $cat_name = $prod_cat->name;
         ?>
-        <div class="wp-block-column is-vertically-aligned-center"> 
+        <div class="wp-block-column is-vertically-aligned-center woo-category-block"> 
         <a href="<?php echo $term_link; ?>">
           <img src="<?php echo $shop_catalog_img[0]; ?>" alt="<?php echo $cat_name; ?>" />
           <h3>
