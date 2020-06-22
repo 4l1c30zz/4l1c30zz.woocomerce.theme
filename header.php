@@ -46,4 +46,9 @@
           </div>
           </div>
         </header>
+        <?php  if( is_front_page()  ) { ?>
+          <div class="home_wrap page_wrapper">
+      <?php } else { ?>
     <div id="main" class="page_wrapper">
+
+      <?php  } ?>

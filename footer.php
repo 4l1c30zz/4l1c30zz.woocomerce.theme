@@ -1,4 +1,5 @@
 </div>
+<p class="has-text-align-center characters_block">{!%@#”/~%&amp;?}</p>
  <footer id="site_fotter">
 
    <div class="logo">
