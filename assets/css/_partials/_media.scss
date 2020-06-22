@@ -52,39 +52,23 @@
         .logo {
             width: 100%;
             text-align: center;
+            order: 2;
+        }
+        nav{
+            order: 3;
         }
         li a {
             font-size: font_size(f18);
             padding: 5px;
         }
-    }
-    #main {
-        .case_holder {
-            flex-wrap: wrap;
-            flex-direction: row;
-            .wp-block-column {
-                flex-basis: 47% !important;
-                margin: 10px;
-            }
-        }
-        .about {
-            flex-direction: column;
-            .wp-block-column {
-                width: 100%;
-                padding: 10px;
-            }
+        .cart {
+            order: 1;
+            position: absolute;
+            right: 5%;
         }
     }
-    #development {
-        margin: 10px auto 0;
-    }
-    .proj_row_wrap > div {
-        flex-basis: 100%;
-    }
-    .proj_row_wrap .proj_wrapper .copy {
-        left: auto;
-        right: auto;
-    }
+
+ 
     /*woo styles`*/
     .wc-block-grid.has-3-columns .wc-block-grid__product {
         flex-basis: 50%;
@@ -231,6 +215,7 @@
         max-width: 80%;
         bottom: 10px;
     }
+    
     /*blog*/
     .single-post {
         .single_head {
@@ -283,6 +268,12 @@
         position: absolute;
         z-index: 99;
         top: 0;
+        .cart{
+            .inner_cart_wrap{
+                min-width: 80vw;
+                max-height: 70vh;
+            }
+        }
         #logo {
             max-width: 65px;
         }
@@ -326,49 +317,8 @@
             max-width: 50px;
         }
     }
-    #main {
-        margin-top: 120px;
-        .wp-block-column {
-            flex-basis: 100% !important;
-            flex-grow: 0;
-        }
-        .about {
-            .wp-block-column {
-                padding: 10px;
-            }
-            p {
-                font-size: font_size(f14);
-                line-height: normal;
-                text-transform: uppercase;
-                line-height: 1.2em;
-            }
-        }
-        .case_holder .wp-block-column {
-            flex-basis: 100% !important;
-            margin: 10px;
-        }
-        .mail_link a {
-            font-size: font_size(f20);
-            margin-bottom: 10px;
-        }
-    }
     .post_data .cont {
         line-height: 1.6em;
-    }
-    .glitch_title {
-        min-height: 108px;
-        font-size: font_size(f60);
-    }
-    #art {
-        margin: 0 auto 20px;
-    }
-    .gal li.a figure::after {
-        top: 15.2vh;
-    }
-
-    .gal li.a figure img {
-        top: 15vh;
-        max-height: 69vh;
     }
     #loader {
         .a p {

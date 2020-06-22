@@ -210,7 +210,10 @@ body.woocommerce #site_header.mob .header_nav,body.woocommerce-page #site_header
 .woocommerce-checkout .woocommerce-NoticeGroup-checkout.min li{font-size:0}
 .woocommerce-checkout .woocommerce-NoticeGroup-checkout.min:before{background:#1a181b;color:#fff;-webkit-transform:rotate(180deg);transform:rotate(180deg)}
 html{scroll-behavior:smooth}
-body{font:400 16px "Montserrat";min-height:125vh;width:100%;color:#1a181b}
+body{font:400 16px "Montserrat";min-height:125vh;width:100%;color:#1a181b;overflow:auto;scrollbar-width:thin;scrollbar-color:#ec008c #000300}
+body::-webkit-scrollbar{width:11px}
+body::-webkit-scrollbar-track{background:#ec008c}
+body::-webkit-scrollbar-thumb{background-color:#ec008c;border-radius:6px;border:3px solid #000300}
 input{color:#1a181b;font-size:16px;border-radius:0}
 #nav_toggle{display:none}
 h2,h1,h3,h4{margin-bottom:10px;line-height:1.2em}
@@ -254,7 +257,8 @@ button,.button,.home_btn a{border-radius:0;padding:5px 10px;background:#1a181b;b
 #site_header .cart .cart_icon_wrap{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 #site_header .cart .cart_icon_wrap #cart_counter{font-size:1.5em;display:block;-ms-flex-preferred-size:20%;flex-basis:20%}
 #site_header .cart .cart_icon_wrap .fa-shopping-cart{font-size:1.5em;-ms-flex-preferred-size:80%;flex-basis:80%}
-#site_header .cart .inner_cart_wrap{display:none;background:white;padding:20px 30px;position:absolute;top:110%;right:5%;z-index:99;min-width:40vw;max-height:50vw;overflow-y:scroll;z-index:100}
+#site_header .cart .inner_cart_wrap{display:none;background:white;padding:20px 30px;position:absolute;top:110%;right:5%;z-index:99;min-width:40vw;z-index:100}
+#site_header .cart .inner_cart_wrap ul{max-height:50vh;overflow-y:auto}
 #site_header .cart .inner_cart_wrap.a{display:block}
 #site_header .cart .inner_cart_wrap li{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-line-pack:center;align-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;align-content:center;text-transform:uppercase}
 #site_header .cart .inner_cart_wrap li img{max-width:10vw;-o-object-fit:contain;object-fit:contain;max-height:10vh;-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}
@@ -262,7 +266,7 @@ button,.button,.home_btn a{border-radius:0;padding:5px 10px;background:#1a181b;b
 #site_header .cart .inner_cart_wrap li a{-ms-flex-preferred-size:33.33%;flex-basis:33.33%}
 #site_header .cart .inner_cart_wrap li .price{-ms-flex-preferred-size:33.33%;flex-basis:33.33%}
 #site_header .cart:hover .inner_cart_wrap{display:block}
-#site_header .cart .woocommerce-mini-cart__buttons{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-line-pack:center;align-content:center}
+#site_header .cart .woocommerce-mini-cart__buttons{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-line-pack:center;align-content:center;max-width:250px;margin:0 auto}
 #site_header .cart .woocommerce-mini-cart__total.total{text-align:center;padding:20px 0 0;text-transform:uppercase}
 #site_header .cart .woocommerce-mini-cart__total.total strong{display:block;font-weight:900;margin-bottom:5px}
 #main{position:relative;max-width:1200px;margin:0 auto;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;min-height:95vh}
@@ -322,15 +326,10 @@ h2{font-size:60px}
 .glitch_title{font-size:80px;min-height:135px}
 .glitch_title span{display:block;text-align:center;width:100%}
 #site_header .cont_wrap{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:15px 10px;margin:0 auto}
-#site_header .logo{width:100%;text-align:center}
+#site_header .logo{width:100%;text-align:center;-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}
+#site_header nav{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}
 #site_header li a{font-size:18px;padding:5px}
-#main .case_holder{-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
-#main .case_holder .wp-block-column{-ms-flex-preferred-size:47% !important;flex-basis:47% !important;margin:10px}
-#main .about{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
-#main .about .wp-block-column{width:100%;padding:10px}
-#development{margin:10px auto 0}
-.proj_row_wrap>div{-ms-flex-preferred-size:100%;flex-basis:100%}
-.proj_row_wrap .proj_wrapper .copy{left:auto;right:auto}
+#site_header .cart{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1;position:absolute;right:5%}
 .wc-block-grid.has-3-columns .wc-block-grid__product{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}
 .archive .products.columns-3{-ms-flex-preferred-size:100%;flex-basis:100%}
 .archive .products.columns-3 li{-ms-flex-preferred-size:calc(50% - 20px);flex-basis:calc(50% - 20px)}
@@ -370,6 +369,7 @@ h2{font-size:30px}
 h3{font-size:20px}
 .home #main{margin-top:8em}
 #site_header{position:absolute;z-index:99;top:0}
+#site_header .cart .inner_cart_wrap{min-width:80vw;max-height:70vh}
 #site_header #logo{max-width:65px}
 #site_header .menu-main-menu-container{position:static}
 #site_header .header_nav{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;position:fixed;left:0;width:100vw;z-index:999;padding:20px 0;-webkit-transform:scaleY(0);transform:scaleY(0);-webkit-transition:-webkit-transform .3s ease;transition:-webkit-transform .3s ease;transition:transform .3s ease;transition:transform .3s ease,-webkit-transform .3s ease}
@@ -377,17 +377,7 @@ h3{font-size:20px}
 #site_header .logo #nav_toggle{font:900 20px "Montserrat Subrayada";-webkit-text-decoration:uppercase;text-decoration:uppercase;position:relative;bottom:-2px;display:block;text-align:center;width:100%;color:#1a181b;cursor:pointer}
 #site_header.mob .header_nav{display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important;-webkit-transform:scaleY(1);transform:scaleY(1)}
 #site_header.a #logo{max-width:50px}
-#main{margin-top:120px}
-#main .wp-block-column{-ms-flex-preferred-size:100% !important;flex-basis:100% !important;-webkit-box-flex:0;-ms-flex-positive:0;flex-grow:0}
-#main .about .wp-block-column{padding:10px}
-#main .about p{font-size:14px;line-height:normal;text-transform:uppercase;line-height:1.2em}
-#main .case_holder .wp-block-column{-ms-flex-preferred-size:100% !important;flex-basis:100% !important;margin:10px}
-#main .mail_link a{font-size:20px;margin-bottom:10px}
 .post_data .cont{line-height:1.6em}
-.glitch_title{min-height:108px;font-size:60px}
-#art{margin:0 auto 20px}
-.gal li.a figure::after{top:15.2vh}
-.gal li.a figure img{top:15vh;max-height:69vh}
 #loader .a p{font-size:80px}
 #loader .side{font-size:40px}
 #site_fotter .logo svg{max-width:80px;margin:0 auto}
