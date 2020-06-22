@@ -465,8 +465,11 @@
                 .select2-selection.select2-selection--single,
                 .select2-dropdown {
                     max-width: 97%;
-                    width: 100%;
+                    width: 100%; 
                     display: block;
+                }
+                .select2-container{
+                    min-width: auto !important;
                 }
 
                 .select2-selection.select2-selection--single {
