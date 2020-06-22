@@ -23,6 +23,10 @@ $colors: (
   "_yellow": #faff00,
   "_blue": #02a9ea,
 );
+$patterns: ("stripes": url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAQElEQVQYlW2OwQ0AMAgCbw7XcMFubj81RVpeGgIcQHK1gJC/+shjtkLNTmpTaZMm05IB76YzfTedaW46k28Opg1VYQ5hW3JdzwAAAABJRU5ErkJggg=='),
+	"waves": url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAJElEQVQYlWNgwAT/sYjhVIRXMbokVsW4TPhPjCJi5clXTBwAAOy+CfekNMf3AAAAAElFTkSuQmCC'),
+	"squares": url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAGUlEQVQImWNIKL/tiwszJJTf9mXABQabJADsDBn0cAxsQAAAAABJRU5ErkJggg=='),
+);
 
 $font_sizes: (
 "f14": 14px,

@@ -283,14 +283,23 @@ function my_acf_init() {
 			'name'				=> 'woo-categories',
 			'title'				=> __('woo categories'),
 			'description'		=> __('A woocomerce block'),
-			'render_callback'	=> 'woo_categories_render_callback',
+			'render_callback'	=> 'acf_render_callback',
 			'category'			=> 'common',
 			'icon'				=> 'admin-comments',
-			'keywords'			=> array( 'pholio', 'smiley' ),
+			'keywords'			=> array( 'woo categories', 'smiley' ),
+        ));
+        acf_register_block(array(
+			'name'				=> 'hero-animation',
+			'title'				=> __('hero animation'),
+			'description'		=> __('A woocomerce block'),
+			'render_callback'	=> 'acf_render_callback',
+			'category'			=> 'common',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'hero animation', 'smiley' ),
 		));
 	}
 }
-function woo_categories_render_callback( $block ) {
+function acf_render_callback( $block ) {
 
 	$slug = str_replace('acf/', '', $block['name']);
 	if( file_exists( get_theme_file_path("/assets/template-parts/block/content-{$slug}.php") ) ) {

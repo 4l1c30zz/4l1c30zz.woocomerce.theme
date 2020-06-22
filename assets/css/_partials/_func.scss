@@ -24,3 +24,6 @@
   }
   @return map-get($font_weights, $key);
 }
+@function pattern($pattern-name) {
+	@return map-get($patterns, $pattern-name);
+}

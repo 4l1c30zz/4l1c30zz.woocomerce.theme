@@ -31,6 +31,8 @@ body {
 	overflow: auto;
 	scrollbar-width: thin;
 	scrollbar-color: color(_magenta) color(_black);
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -473,10 +475,12 @@ button,
 		}
 	}
 }
-.home_wrap{
+
+.home_wrap {
 	@include flex(center, center, column);
 	position: relative;
 }
+
 #main {
 	position: relative;
 	@include cont_width;
@@ -748,6 +752,100 @@ body.single:not(.woocommerce-page) {
 
 
 
+.hero_animation {
+	position: relative;
 
+	.back_shape {
+		background: yellow;
+		width: 300px;
+		height: 300px;
+		z-index: 1;
+		top: 0;
+		margin: 0 auto;
+		animation: back_shape_anim 3s ease  alternate-reverse 1;
+	}
+
+	.front_shape {
+		border: 5px solid black;
+		width: 270px;
+		height: 270px;
+		z-index: 3;
+		position: absolute;
+		top: -60px;
+		right: 20px;
+		background: pattern(waves) transparent;
+		animation: front_shape_anim 3s ease-in-out forwards alternate 1;
+	}
+
+	.element {
+		text-align: center;
+		position: absolute;
+		top: 60px;
+		right: 30px;
+		z-index: 2;
+
+		.fa-coffee {
+			font-size: 10em;
+
+			path {
+				fill: none;
+				stroke-width: 10;
+				stroke: black;
+				animation: product_icon_animation 3s ease-in-out forwards alternate 1;
+			}
+		}
+	}
+}
+
+@keyframes back_shape_anim {
+	0% {
+
+		border-radius: 100%;
+
+	}
+
+	50% {
+		border-radius: 0;
+	}
+
+	100% {
+		transform: scale(0.8);
+		border-radius: 100%;
+	}
+}
+@keyframes front_shape_anim {
+	0% {
+
+		border-radius: 0;
+		background-position: 200% 100%;
+
+
+	}
+
+	50% {
+		border-radius: 100%;
+		background-position: 0 200%;
+	}
+
+	100% {
+		transform: scale(0.8);
+		border-radius: 0;
+		background-position: 200% 0;
+	}
+}
+
+@keyframes product_icon_animation {
+	0% {
+		fill: transparent;
+		stroke-dasharray: 500;
+		stroke-dashoffset: 0;
+	}
+
+	100% {
+		fill: black;
+		stroke-dasharray: 1000;
+		stroke-dashoffset: 100;
+	}
+}
 
 @import "_partials/_media";
