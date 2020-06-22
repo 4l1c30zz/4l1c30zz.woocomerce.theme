@@ -488,7 +488,6 @@
                 }
                 #createaccount {
                     display: inline;
-                    width: auto;
                 }
             }
             #order_review {
@@ -517,7 +516,7 @@
         max-width: 80%;
     }
 
-    .archive #main, .blog #main, {
+    .archive #main, .blog #main {
         margin-top: 7em;
     }
     .blog,

@@ -166,10 +166,11 @@ body.woocommerce #site_header.mob .header_nav,body.woocommerce-page #site_header
 .woocommerce-checkout #order_review{-ms-flex-preferred-size:30%;flex-basis:30%;padding:0;margin:0}
 .woocommerce-checkout .select2-dropdown{max-width:300px}
 .woocommerce-checkout .checkout.woocommerce-checkout{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-preferred-size:100%;flex-basis:100%;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.woocommerce-checkout .checkout.woocommerce-checkout .woocommerce-billing-fields{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 .woocommerce-checkout .checkout.woocommerce-checkout label{font-size:18px}
 .woocommerce-checkout .checkout.woocommerce-checkout #customer_details{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-preferred-size:70%;flex-basis:70%;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:0;margin:0}
 .woocommerce-checkout .checkout.woocommerce-checkout .col-1{-ms-flex-preferred-size:50%;flex-basis:50%}
-.woocommerce-checkout .checkout.woocommerce-checkout .col-1 .form-row{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+.woocommerce-checkout .checkout.woocommerce-checkout .col-1 .form-row{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:start;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 .woocommerce-checkout .checkout.woocommerce-checkout .col-1 .form-row .select2-container{min-width:300px}
 .woocommerce-checkout .checkout.woocommerce-checkout .col-1 .form-row .select2-selection{max-width:300px;border-radius:0;height:35px;border:1px solid #1a181b;position:relative}
 .woocommerce-checkout .checkout.woocommerce-checkout .col-1 .form-row .select2-selection #select2-billing_country-container{padding:3px 0 0 10px}
@@ -191,7 +192,7 @@ body.woocommerce #site_header.mob .header_nav,body.woocommerce-page #site_header
 .woocommerce-checkout #payment ul li label a{font-weight:700}
 .woocommerce-checkout #payment ul li label img{display:none}
 .woocommerce-checkout #payment ul li p{line-height:1.6em;margin-bottom:20px;font-size:18px}
-.woocommerce-checkout #payment .woocommerce-terms-and-conditions-wrapper{text-align:center}
+.woocommerce-checkout #payment .woocommerce-terms-and-conditions-wrapper{text-align:left;margin:15px 0}
 .woocommerce-checkout button{font-size:18px;margin:0 auto;display:block;text-transform:uppercase}
 .woocommerce-checkout .woocommerce-NoticeGroup-checkout{position:fixed;background:#faff00;padding:45px 20px 10px;bottom:5%;right:5%;z-index:999;height:100%;max-height:60vh;-webkit-transition:height .3s ease;transition:height .3s ease}
 .woocommerce-checkout .woocommerce-NoticeGroup-checkout li{margin-bottom:10px;font-size:18px}
@@ -418,7 +419,7 @@ h3{font-size:20px}
 .woocommerce-checkout .checkout.woocommerce-checkout #customer_details .col-1{width:100%}
 .woocommerce-checkout .checkout.woocommerce-checkout #customer_details .col-2 #order_comments{max-width:100%}
 .woocommerce-checkout .checkout.woocommerce-checkout #customer_details .woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox{display:inline}
-.woocommerce-checkout .checkout.woocommerce-checkout #customer_details #createaccount{display:inline;width:auto}
+.woocommerce-checkout .checkout.woocommerce-checkout #customer_details #createaccount{display:inline}
 .woocommerce-checkout .checkout.woocommerce-checkout #order_review{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%;margin:0}
 .woocommerce-checkout .checkout.woocommerce-checkout #order_review #payment{max-width:100%}
 .woocommerce-checkout .checkout.woocommerce-checkout #order_review #payment ul li label{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-line-pack:center;align-content:center;font-size:16px;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
