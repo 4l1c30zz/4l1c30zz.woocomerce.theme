@@ -216,6 +216,7 @@ body::-webkit-scrollbar-track{background:#ec008c}
 body::-webkit-scrollbar-thumb{background-color:#ec008c;border-radius:6px;border:3px solid #000300}
 input{color:#1a181b;font-size:16px;border-radius:0}
 #nav_toggle{display:none}
+.rotated{-webkit-transform:rotate(90deg);transform:rotate(90deg);position:relative;right:7vw;float:left;width:100%;text-align:center}
 h2,h1,h3,h4{margin-bottom:10px;line-height:1.2em}
 h1{font:900 100px "Montserrat Subrayada"}
 h2{font:900 88px "Montserrat Subrayada"}
@@ -226,6 +227,10 @@ button,.button,.home_btn a{border-radius:0;padding:5px 10px;background:#1a181b;b
 .breadcrumbs{margin:0 auto 10px;-ms-flex-preferred-size:100%;flex-basis:100%;text-align:center;font-weight:600}
 .wp-embedded-content{width:100%;min-height:100vh}
 #side_toggle{display:none}
+.about{width:100%;min-height:43vh;margin:0}
+.about p{text-transform:uppercase;font-weight:600}
+.hero{margin:40px 0 20px}
+.characters_block{width:100%;background:#faff00;padding:20px;font:900 9em "Montserrat Subrayada"}
 #loader{display:none}
 #loader.a{display:none !important;position:fixed;background:#fff;z-index:999;top:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100vw;height:100vh}
 #loader.a #load{z-index:1;background:#ec008c;width:200px;height:200px;position:absolute;top:25%;border-radius:0;-webkit-transform:rotate(0);transform:rotate(0)}

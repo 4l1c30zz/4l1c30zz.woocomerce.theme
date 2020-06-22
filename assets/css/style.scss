@@ -58,7 +58,15 @@ input {
 #nav_toggle {
 	display: none;
 }
-
+.rotated {
+	transform: rotate(90deg);
+	position: relative;
+	right: 7vw;
+	float: left;
+	width: 100%;
+	text-align: center;
+	
+}
 h2,
 h1,
 h3,
@@ -117,7 +125,24 @@ button,
 #side_toggle {
 	display: none;
 }
-
+.about {
+	width: 100%;
+	min-height: 43vh;
+	margin: 0px 0 0;
+	p{
+		text-transform: uppercase;
+		font-weight: font_weight(bold);
+	}
+}
+.hero{
+	margin: 40px 0 20px;
+}
+.characters_block{
+	width: 100%;
+	background: color(_yellow);
+	padding: 20px;
+	font: font_weight(boldest) 9em font(lined_font);
+}
 #loader {
 	display: none;
 
@@ -248,6 +273,7 @@ button,
 		max-width: 70px;
 	}
 }
+
 
 #site_header {
 	width: 100%;
