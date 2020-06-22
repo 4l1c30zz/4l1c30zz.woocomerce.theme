@@ -232,7 +232,7 @@ button,.button,.home_btn a{border-radius:0;padding:5px 10px;background:#1a181b;b
 .about_inner{width:100%}
 .about_inner p{text-transform:uppercase;font-weight:600}
 .hero{margin:40px 0 20px}
-.characters_block{width:100%;background:#faff00;padding:20px;font:900 9em "Montserrat Subrayada"}
+.characters_block{width:100%;background:#ec008c;padding:10px;font:900 3em "Montserrat Subrayada"}
 #loader{display:none}
 #loader.a{display:none !important;position:fixed;background:#fff;z-index:999;top:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100vw;height:100vh}
 #loader.a #load{z-index:1;background:#ec008c;width:200px;height:200px;position:absolute;top:25%;border-radius:0;-webkit-transform:rotate(0);transform:rotate(0)}
