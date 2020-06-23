@@ -451,6 +451,8 @@ h3{font-size:20px}
 }@media screen and (max-width:600px){.home .about .rotated{-webkit-transform:rotate(-5deg);transform:rotate(-5deg);font-size:70px;position:static;margin-bottom:40px}
 .boxed .wp-block-group__inner-container{padding:20px}
 .mail_link{font-size:18px}
+#loader.a .a p{font-size:60px}
+#loader.a .side{font-size:30px}
 }@media screen and (max-width:480px){.home .about .rotated{-webkit-transform:rotate(-10deg);transform:rotate(-10deg);font-size:70px;position:static;margin-bottom:40px}
 .hero_heading{font-size:80px}
 .characters_block{font-size:25px}

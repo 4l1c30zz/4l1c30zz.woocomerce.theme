@@ -662,6 +662,15 @@
 	.mail_link {
 		font-size: font_size(f18);
 	}
+		#loader.a {
+			.a p {
+				font-size: 60px;
+			}
+
+			.side {
+				font-size: 30px;
+			}
+		}
 }
 
 @media screen and (max-width:480px) {
