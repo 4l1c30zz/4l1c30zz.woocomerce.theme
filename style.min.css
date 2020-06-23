@@ -281,7 +281,7 @@ button,.button,.home_btn a{border-radius:0;padding:5px 10px;background:#1a181b;b
 #site_header .cart .woocommerce-mini-cart__total.total strong{display:block;font-weight:900;margin-bottom:5px}
 .home_wrap{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;position:relative}
 #main{position:relative;max-width:1200px;margin:0 auto;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
-#main .mail_link a{font-size:40px;text-decoration:underline;margin-bottom:20px}
+.mail_link{font:700 20px "Montserrat Subrayada";margin:5px auto 10px;display:block;-ms-flex-preferred-size:100%;flex-basis:100%;text-align:center}
 #site-footer{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap}
 #site-footer.absolute{position:absolute;bottom:0}
 #site-footer .foot_logo path{fill:#1a181b;stroke:#1a181b}
@@ -333,7 +333,6 @@ body.blog #site_header.mob .header_nav,body.archive:not(.woocommerce-page) #site
 .hero_animation .element .fa-coffee path{fill:none;stroke-width:10;stroke:black;-webkit-animation:product_icon_animation 3s ease-in-out forwards alternate 1;animation:product_icon_animation 3s ease-in-out forwards alternate 1}
 @media screen and (max-width:1280px){#main,#site_header .cont_wrap{max-width:90%}
 h2{font-size:70px}
-.mail_link a{font-size:30px}
 .proj_row_wrap{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
 .proj_row_wrap>div{-ms-flex-preferred-size:calc(50% - 20px);flex-basis:calc(50% - 20px)}
 }@media screen and (max-width:1024px){h1{font-size:80px}
@@ -380,7 +379,9 @@ h2{font-size:60px}
 .wp-block-latest-posts.is-grid{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
 .wp-block-latest-posts.is-grid>li{width:100%;-ms-flex-preferred-size:calc(50% - 40px);flex-basis:calc(50% - 40px);margin:10px}
 .blog .post_grid>div,.tax-proj_cat .post_grid>div,.category .post_grid>div{padding:0}
-}@media screen and (max-width:768px){#site-footer.absolute{position:relative;bottom:0}
+#site-footer .logo svg{max-width:80px}
+}@media screen and (max-width:768px){#site-footer.absolute{position:relative;bottom:-30px}
+#site-footer .logo svg{max-width:50px}
 h1{font-size:50px}
 h2{font-size:30px}
 .home h2{font-size:50px}
@@ -436,6 +437,7 @@ h3{font-size:20px}
 .wp-block-latest-posts.is-grid>li{-ms-flex-preferred-size:100%;flex-basis:100%}
 }@media screen and (max-width:600px){.home .about .rotated{-webkit-transform:rotate(-5deg);transform:rotate(-5deg);font-size:70px;position:static;margin-bottom:40px}
 .boxed .wp-block-group__inner-container{padding:20px}
+.mail_link{font-size:18px}
 }@media screen and (max-width:480px){.home .about .rotated{-webkit-transform:rotate(-10deg);transform:rotate(-10deg);font-size:70px;position:static;margin-bottom:40px}
 .hero_heading{font-size:80px}
 .characters_block{font-size:25px}
@@ -443,7 +445,6 @@ h3{font-size:20px}
 h1{font-size:40px}
 .home h2{font-size:30px}
 #main .post_data .cont{line-height:2.5em}
-#main .mail_link a{font-size:17px}
 .archive .products.columns-3 .woocommerce-loop-product__title{font-size:18px}
 .archive .products.columns-3 li img{max-height:160px}
 }@-webkit-keyframes color{100%{-webkit-transform:translate(1%,-1%);transform:translate(1%,-1%)}

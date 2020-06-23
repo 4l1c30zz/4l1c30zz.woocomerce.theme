@@ -9,6 +9,7 @@
            </svg>
        </a>
    </div>
+   <a class="mail_link" href="mailto:4l1c30zz@gmail.com">4l1c30zz@gmail.com</a>
     <div class="has-text-align-center characters_block">{!%@#”/~%&amp;?}</div>
 
     </footer>

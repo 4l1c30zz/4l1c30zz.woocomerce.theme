@@ -9,9 +9,6 @@
 		font-size: font_size(f70);
 	}
 
-	.mail_link a {
-		font-size: font_size(f30);
-	}
 
 	.proj_row_wrap {
 		justify-content: flex-start;
@@ -291,17 +288,23 @@
 	.tax-proj_cat .post_grid>div,
 	.category .post_grid>div {
 		padding: 0;
-	}
+    }
+    	#site-footer {
+    		.logo svg {
+    			max-width: 80px;
+    		}
+    	}
 }
 
 @media screen and (max-width:768px) {
 	#site-footer {
-
-
 		&.absolute {
 			position: relative;
-			bottom: 0;
-		}
+			bottom: -30px;
+        }
+        .logo svg{
+            max-width: 50px;
+        }
 	}
 
 	h1 {
@@ -610,7 +613,10 @@
 
 	.boxed .wp-block-group__inner-container {
 		padding: 20px;
-	}
+    }
+    		.mail_link  {
+    			font-size: font_size(f18);
+    		}
 }
 
 @media screen and (max-width:480px) {
@@ -645,10 +651,6 @@
 	#main {
 		.post_data .cont {
 			line-height: 2.5em;
-		}
-
-		.mail_link a {
-			font-size: font_size(f17);
 		}
 	}
 

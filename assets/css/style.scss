@@ -92,15 +92,18 @@ p {
 	margin-bottom: $marg_bottom;
 	font: inherit;
 }
-.home h2{
+
+.home h2 {
 	margin-bottom: 40px;
 }
+
 .hero_heading {
 	margin: 100px auto 50px;
 	font-size: 185px;
 	text-shadow: 0 0 0 cyan, 0 0 0 yellow, 0 0 0 black;
 	animation: color_shadow 0.1s ease forwards alternate 10 7s;
 	padding: 0 20px;
+
 	&:hover {
 		animation: color_shadow 0.1s ease forwards alternate infinite;
 	}
@@ -518,21 +521,28 @@ button,
 	@include flex(center, center, column);
 
 
-	.mail_link a {
-		font-size: font_size(f40);
-		text-decoration: underline;
-		margin-bottom: 20px;
-	}
+
+}
+
+.mail_link {
+	font: font_weight(bolder) font_size(f20) font(lined_font);
+	margin: 5px auto 10px;
+	display: block;
+	flex-basis: 100%;
+	text-align: center;
 }
 
 #site-footer {
-width: 100%;
-&.absolute {
-	position: absolute;
-	bottom: 0;
-}
+	width: 100%;
+
+	&.absolute {
+		position: absolute;
+		bottom: 0;
+	}
+
 	@include flex(center, center, row);
 	flex-wrap: wrap;
+
 	.foot_logo path {
 		fill: color(_gray);
 		stroke: color(_gray);
@@ -790,7 +800,7 @@ body.single:not(.woocommerce-page) {
 		z-index: 1;
 		top: 0;
 		margin: 0 auto;
-		animation: back_shape_anim 3s ease  alternate-reverse 1;
+		animation: back_shape_anim 3s ease alternate-reverse 1;
 	}
 
 	.front_shape {
@@ -841,6 +851,7 @@ body.single:not(.woocommerce-page) {
 		border-radius: 100%;
 	}
 }
+
 @keyframes front_shape_anim {
 	0% {
 
