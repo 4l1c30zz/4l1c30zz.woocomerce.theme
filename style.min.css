@@ -56,6 +56,7 @@ body.woocommerce #site_header.mob .header_nav,body.woocommerce-page #site_header
 .screen-reader-text{display:none}
 .price{font:600 17px "Montserrat";display:block;text-align:center}
 .woocommerce-breadcrumb{margin:10px auto;-ms-flex-preferred-size:100%;flex-basis:100%;text-align:center;font-weight:600}
+.products .price>span{padding:5px;background:black;color:white}
 .single-product .woocommerce-breadcrumb{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}
 .single-product .woocommerce-product-gallery{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}
 .single-product .woocommerce-product-gallery .woocommerce-product-gallery__wrapper img{-o-object-fit:contain;object-fit:contain;max-height:72vh}

@@ -240,7 +240,7 @@ function theme_woocommerce_support() {
     ),
 ) ); }
 add_action( 'after_setup_theme', 'theme_woocommerce_support' );
-//enable default woo gallery , zoom  and slider
+//enable default woo gallery   and slider
 add_theme_support( 'wc-product-gallery-lightbox' );
 add_theme_support( 'wc-product-gallery-slider' );
 //disable default woo styles

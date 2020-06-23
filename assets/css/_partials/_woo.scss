@@ -187,7 +187,11 @@ body.woocommerce-page {
 	text-align: center;
 	font-weight: font_weight(bold);
 }
-
+.products .price>span {
+	padding: 5px;
+	background: black;
+	color: white
+}
 //single prod styles
 .single-product {
 	.woocommerce-breadcrumb {
