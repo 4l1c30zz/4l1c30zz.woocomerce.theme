@@ -215,6 +215,7 @@ body.woocommerce #site_header.mob .header_nav,body.woocommerce-page #site_header
 .cross-sells ul li a{display:block;text-align:center}
 .cross-sells ul li img{height:300px;-o-object-fit:cover;object-fit:cover}
 .cross-sells ul li .price{background:black;display:inline-block;color:white;padding:5px}
+.woocommerce-info{background:#faff00}
 html{scroll-behavior:smooth}
 body{font:400 16px "Montserrat";position:relative;width:100%;color:#1a181b;overflow:auto;scrollbar-width:thin;scrollbar-color:#ec008c #000300;overflow-y:auto;overflow-x:hidden;min-height:100vh}
 body::-webkit-scrollbar{width:11px}
