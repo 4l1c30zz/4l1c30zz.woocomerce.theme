@@ -29,6 +29,11 @@
     h2 {
         font-size: font_size(f60);
     }
+.hero_heading {
+    margin: 50px auto 50px;
+    font-size: 120px;
+
+}
 
 #site-footer {
 	
@@ -258,6 +263,10 @@
     h3 {
         font-size: font_size(f20);
     }
+    .hero_heading {
+    	font-size: 100px;
+
+    }
     .home #main {
         margin-top: 8em;
     }
@@ -484,6 +493,10 @@
     }
 }
 @media screen and (max-width:480px) {
+        .hero_heading {
+        	font-size: 80px;
+
+        }
 .checkout.woocommerce-checkout #customer_details  #billing_country_field .woocommerce-input-wrapper{
     max-width: 100%;
   }

@@ -222,6 +222,8 @@ h2{font:900 88px "Montserrat Subrayada"}
 h3{font:900 21px "Montserrat Subrayada"}
 h4{font:900 20px "Montserrat Subrayada"}
 p{line-height:1.2em;margin-bottom:10px;font:inherit}
+.hero_heading{margin:100px auto 150px;font-size:185px;text-shadow:0 0 0 cyan,0 0 0 yellow,0 0 0 black;-webkit-animation:color_shadow .1s ease forwards alternate 10 7s;animation:color_shadow .1s ease forwards alternate 10 7s;padding:0 20px}
+.hero_heading:hover{-webkit-animation:color_shadow .1s ease forwards alternate infinite;animation:color_shadow .1s ease forwards alternate infinite}
 button,.button,.home_btn a{border-radius:0;padding:5px 10px;background:#1a181b;border:0;color:#fff;font:900 18px "Montserrat Subrayada";-webkit-transition:all .3s ease;transition:all .3s ease}
 .breadcrumbs{margin:0 auto 10px;-ms-flex-preferred-size:100%;flex-basis:100%;text-align:center;font-weight:600}
 .wp-embedded-content{width:100%;min-height:100vh}
@@ -336,6 +338,7 @@ h2{font-size:70px}
 .proj_row_wrap>div{-ms-flex-preferred-size:calc(50% - 20px);flex-basis:calc(50% - 20px)}
 }@media screen and (max-width:1024px){h1{font-size:80px}
 h2{font-size:60px}
+.hero_heading{margin:50px auto 50px;font-size:120px}
 #site-footer.absolute{position:relative;bottom:0}
 #site_header .cont_wrap{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:15px 10px;margin:0 auto}
 #site_header .logo{width:100%;text-align:center;-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}
@@ -379,6 +382,7 @@ h2{font-size:60px}
 h2{font-size:30px}
 .home h2{font-size:50px}
 h3{font-size:20px}
+.hero_heading{font-size:100px}
 .home #main{margin-top:8em}
 #site_header .cart .inner_cart_wrap{min-width:80vw;max-height:70vh}
 #site_header #logo{max-width:65px}
@@ -426,7 +430,8 @@ h3{font-size:20px}
 .wp-block-latest-posts.is-grid{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .wp-block-latest-posts.is-grid .wp-block-latest-posts__featured-image img{width:100%;max-width:100% !important;-o-object-fit:cover;object-fit:cover}
 .wp-block-latest-posts.is-grid>li{-ms-flex-preferred-size:100%;flex-basis:100%}
-}@media screen and (max-width:480px){.checkout.woocommerce-checkout #customer_details #billing_country_field .woocommerce-input-wrapper{max-width:100%}
+}@media screen and (max-width:480px){.hero_heading{font-size:80px}
+.checkout.woocommerce-checkout #customer_details #billing_country_field .woocommerce-input-wrapper{max-width:100%}
 h1{font-size:40px}
 .home h2{font-size:30px}
 #main .post_data .cont{line-height:2.5em}
@@ -469,6 +474,12 @@ h1{font-size:40px}
 70%{-webkit-transform:translate(-20%,-5%);transform:translate(-20%,-5%)}
 80%{-webkit-transform:translate(0,-15%);transform:translate(0,-15%)}
 90%{-webkit-transform:translate(-10%,-20%);transform:translate(-10%,-20%)}
+}@-webkit-keyframes color_shadow{0%{text-shadow:10px 0 0 cyan,5px -5px 0 black,-10px 0 0 yellow}
+50%{text-shadow:0 5px 0 cyan,0 0 0 black,0 -5px 0 yellow}
+100%{text-shadow:-5px -10px 0 cyan,3px -5px 0 black,5px 10px 0 yellow}
+}@keyframes color_shadow{0%{text-shadow:10px 0 0 cyan,5px -5px 0 black,-10px 0 0 yellow}
+50%{text-shadow:0 5px 0 cyan,0 0 0 black,0 -5px 0 yellow}
+100%{text-shadow:-5px -10px 0 cyan,3px -5px 0 black,5px 10px 0 yellow}
 }@-webkit-keyframes back_shape_anim{0%{border-radius:100%}
 50%{border-radius:0}
 100%{-webkit-transform:scale(0.8);transform:scale(0.8);border-radius:100%}
