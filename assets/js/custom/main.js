@@ -7,7 +7,8 @@ window.resize = function () {
 };
 
 function footerStickToBottom() {
-	let bodyHeight = document.body.scrollHeight;
+  let bodyHeight = document.body.scrollHeight;
+  console.log(bodyHeight);
 	if (bodyHeight < 950) {
 		document.querySelector("#site-footer").classList.add("absolute");
 	}

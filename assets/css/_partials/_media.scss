@@ -30,9 +30,11 @@
 	h2 {
 		font-size: font_size(f60);
 	}
-.home h2 {
-	margin-bottom: 20px;
-}
+
+	.home h2 {
+		margin-bottom: 20px;
+	}
+
 	.about {
 		margin: 20px auto 40px;
 	}
@@ -47,15 +49,6 @@
 		margin: 50px auto 50px;
 		font-size: 120px;
 
-	}
-
-	#site-footer {
-
-
-		&.absolute {
-			position: relative;
-			bottom: 0;
-		}
 	}
 
 	#site_header {
@@ -218,7 +211,7 @@
 		padding: 10px;
 		position: fixed;
 		top: 6%;
-		right: 5%;
+		left: 5%;
 		cursor: pointer;
 		z-index: 999;
 		background: color(_yellow);
@@ -302,6 +295,15 @@
 }
 
 @media screen and (max-width:768px) {
+	#site-footer {
+
+
+		&.absolute {
+			position: relative;
+			bottom: 0;
+		}
+	}
+
 	h1 {
 		font-size: font_size(f50);
 	}
@@ -597,24 +599,27 @@
 		}
 	}
 }
+
 @media screen and (max-width:600px) {
-.home .about .rotated {
-	transform: rotate(-5deg);
-	font-size: 70px;
-	position: static;
-	margin-bottom: 40px;
+	.home .about .rotated {
+		transform: rotate(-5deg);
+		font-size: 70px;
+		position: static;
+		margin-bottom: 40px;
+	}
+
+	.boxed .wp-block-group__inner-container {
+		padding: 20px;
+	}
 }
-.boxed .wp-block-group__inner-container {
-padding: 20px;
-}
-}
+
 @media screen and (max-width:480px) {
-.home .about .rotated {
-	transform: rotate(-10deg);
-	font-size: 70px;
-	position: static;
-	margin-bottom: 40px;
-}
+	.home .about .rotated {
+		transform: rotate(-10deg);
+		font-size: 70px;
+		position: static;
+		margin-bottom: 40px;
+	}
 
 
 	.hero_heading {

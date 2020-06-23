@@ -342,7 +342,6 @@ h2{font-size:60px}
 .about{margin:20px auto 40px}
 .rotated{top:110px;font-size:100px;margin:0}
 .hero_heading{margin:50px auto 50px;font-size:120px}
-#site-footer.absolute{position:relative;bottom:0}
 #site_header .cont_wrap{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:15px 10px;margin:0 auto}
 #site_header .logo{width:100%;text-align:center;-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}
 #site_header nav{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}
@@ -370,7 +369,7 @@ h2{font-size:60px}
 .woocommerce-checkout .checkout.woocommerce-checkout .col-2 #order_comments_field{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 .woocommerce-checkout #order_review #payment ul li label{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 .woocommerce-checkout #order_review #payment ul li label a{margin-top:10px}
-#side_toggle{display:block;padding:10px;position:fixed;top:6%;right:5%;cursor:pointer;z-index:999;background:#faff00}
+#side_toggle{display:block;padding:10px;position:fixed;top:6%;left:5%;cursor:pointer;z-index:999;background:#faff00}
 #side_toggle:after{content:"filter";font:900 20px "Montserrat Subrayada";color:#1a181b}
 #main #sidebar{position:fixed;top:20%;right:5%;z-index:999;background:#fff;max-width:40%;-webkit-transition:all .3s ease;transition:all .3s ease;height:0;overflow:hidden;-webkit-transition:height .3s ease;transition:height .3s ease;max-width:300px}
 #main #sidebar .inner{padding:20px}
@@ -381,7 +380,8 @@ h2{font-size:60px}
 .wp-block-latest-posts.is-grid{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
 .wp-block-latest-posts.is-grid>li{width:100%;-ms-flex-preferred-size:calc(50% - 40px);flex-basis:calc(50% - 40px);margin:10px}
 .blog .post_grid>div,.tax-proj_cat .post_grid>div,.category .post_grid>div{padding:0}
-}@media screen and (max-width:768px){h1{font-size:50px}
+}@media screen and (max-width:768px){#site-footer.absolute{position:relative;bottom:0}
+h1{font-size:50px}
 h2{font-size:30px}
 .home h2{font-size:50px}
 .home .rotated{-webkit-transform:rotate(-30deg);transform:rotate(-30deg);font-size:70px}
