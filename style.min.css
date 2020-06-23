@@ -222,6 +222,7 @@ h2{font:900 88px "Montserrat Subrayada";line-height:1em}
 h3{font:900 21px "Montserrat Subrayada"}
 h4{font:900 20px "Montserrat Subrayada"}
 p{line-height:1.2em;margin-bottom:10px;font:inherit}
+.home h2{margin-bottom:40px}
 .hero_heading{margin:100px auto 50px;font-size:185px;text-shadow:0 0 0 cyan,0 0 0 yellow,0 0 0 black;-webkit-animation:color_shadow .1s ease forwards alternate 10 7s;animation:color_shadow .1s ease forwards alternate 10 7s;padding:0 20px}
 .hero_heading:hover{-webkit-animation:color_shadow .1s ease forwards alternate infinite;animation:color_shadow .1s ease forwards alternate infinite}
 button,.button,.home_btn a{border-radius:0;padding:5px 10px;background:#1a181b;border:0;color:#fff;font:900 18px "Montserrat Subrayada";-webkit-transition:all .3s ease;transition:all .3s ease}
@@ -337,6 +338,7 @@ h2{font-size:70px}
 .proj_row_wrap>div{-ms-flex-preferred-size:calc(50% - 20px);flex-basis:calc(50% - 20px)}
 }@media screen and (max-width:1024px){h1{font-size:80px}
 h2{font-size:60px}
+.home h2{margin-bottom:20px}
 .about{margin:20px auto 40px}
 .rotated{top:110px;font-size:100px;margin:0}
 .hero_heading{margin:50px auto 50px;font-size:120px}
