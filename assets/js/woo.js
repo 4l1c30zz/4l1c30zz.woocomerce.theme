@@ -9,8 +9,5 @@ jQuery(function ($) {
 
 	$(document.body).trigger('wc_fragment_refresh');
 
-	$('.cart_icon_wrap').on('click', function () {
-		$('.inner_cart_wrap').toggleClass('a');
-	});
 
 });

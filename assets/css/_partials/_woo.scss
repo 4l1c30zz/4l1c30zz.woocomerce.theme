@@ -620,7 +620,7 @@ body.woocommerce-page {
 	position: fixed;
 	bottom: 5%;
 	right: 5%;
-	z-index: 99;
+	z-index: 100;
 
 	.woocommerce-message {
 		padding: 10px;
@@ -643,7 +643,6 @@ body.woocommerce-page {
 	padding: 5px;
 	margin: 0 auto;
 	width: 100%;
-
 	.button.wc-forward {
 		color: color(_white);
 		font-weight: font_weight(bold);
@@ -1097,6 +1096,37 @@ body.woocommerce-page {
 				background: color(_gray);
 				color: color(_white);
 				transform: rotate(180deg);
+			}
+		}
+	}
+}
+//cart cross sells
+.cross-sells {
+	margin-bottom: 20px;
+	ul {
+		display: flex;
+		align-content: center;
+		justify-content: space-between;
+
+		li {
+			flex-basis: calc(33.33% - 20px);
+			margin: 10px;
+
+			a {
+				display: block;
+				text-align: center;
+			}
+
+			img {
+				height: 300px;
+				object-fit: cover;
+			}
+
+			.price {
+				background: black;
+				display: inline-block;
+				color: white;
+				padding: 5px;
 			}
 		}
 	}

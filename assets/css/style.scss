@@ -514,7 +514,8 @@ button,
 #main {
 	position: relative;
 	@include cont_width;
-	@include flex(center, center, column);
+	@include flex(center, flex-start, column);
+	min-height: 60vh;
 
 
 
@@ -530,10 +531,11 @@ button,
 
 #site-footer {
 	width: 100%;
-
-	&.relative {
-		position: relative;
-		bottom: -44px;
+	position: relative;
+	z-index: 2;
+	&.absolute {
+		position: absolute;
+		bottom: 0;
 	}
 
 	@include flex(center, center, row);
@@ -549,7 +551,6 @@ button,
 
 		svg {
 			max-width: 100px;
-			margin-right: 40px;
 			min-width: 90px;
 
 			img {

@@ -153,10 +153,11 @@ window.resize = function () {
 
 function footerStickToBottom() {
   var bodyHeight = document.body.scrollHeight;
-  console.log(bodyHeight);
 
   if (bodyHeight < 950) {
-    document.querySelector("#site-footer").classList.add("relative");
+    document.querySelector("#site-footer").classList.add("absolute");
+  } else {
+    document.querySelector("#site-footer").classList.remove("absolute");
   }
 }
 
