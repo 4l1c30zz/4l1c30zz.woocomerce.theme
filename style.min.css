@@ -381,7 +381,8 @@ ul.products li.product{text-align:center}
 .wp-block-latest-posts.is-grid>li{width:100%;-ms-flex-preferred-size:calc(50% - 40px);flex-basis:calc(50% - 40px);margin:10px}
 .blog .post_grid>div,.tax-proj_cat .post_grid>div,.category .post_grid>div{padding:0}
 #site-footer .logo svg{max-width:80px}
-}@media screen and (max-width:768px){#site-footer.relative{position:relative;bottom:-30px}
+}@media screen and (max-width:768px){#site-footer{padding:20px 0 0}
+#site-footer.relative{position:relative;bottom:-50px}
 #site-footer .logo svg{max-width:50px}
 h1{font-size:50px}
 h2{font-size:30px}
