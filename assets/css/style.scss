@@ -76,6 +76,7 @@ h1 {
 
 h2 {
 	font: font_weight(boldest) font_size(f88) font(lined_font);
+	line-height: 1em;
 }
 
 h3 {
@@ -92,7 +93,7 @@ p {
 	font: inherit;
 }
 .hero_heading {
-	margin: 100px auto 150px;
+	margin: 100px auto 50px;
 	font-size: 185px;
 	text-shadow: 0 0 0 cyan, 0 0 0 yellow, 0 0 0 black;
 	animation: color_shadow 0.1s ease forwards alternate 10 7s;
@@ -166,8 +167,9 @@ button,
 	left: 0;
 	display: inline-block;
 	width: auto;
-	top: 80px;
-
+	top: 85px;
+	font-size: 100px;
+	margin: 0;
 }
 
 .about_inner {
