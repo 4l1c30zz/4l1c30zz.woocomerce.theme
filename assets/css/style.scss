@@ -101,12 +101,9 @@ p {
 	margin: 100px auto 50px;
 	font-size: 185px;
 	text-shadow: 0 0 0 cyan, 0 0 0 yellow, 0 0 0 black;
-	animation: color_shadow 0.1s ease forwards alternate 10 7s;
+	animation: color_shadow 0.1s ease forwards alternate 25 5s;
 	padding: 0 20px;
 
-	&:hover {
-		animation: color_shadow 0.1s ease forwards alternate infinite;
-	}
 }
 
 @keyframes color_shadow {
@@ -203,7 +200,6 @@ button,
 	display: none;
 
 	&.a {
-		display: none !important;
 		position: fixed;
 		background: color(_white);
 		z-index: 999;
@@ -234,7 +230,7 @@ button,
 
 		p {
 			white-space: nowrap;
-			font: font_weight(boldest) font_size(f100) font(base_font);
+			font: font_weight(boldest) font_size(f100) font(lined_font);
 			padding: 10px;
 			text-transform: uppercase;
 			position: relative;
@@ -242,7 +238,7 @@ button,
 		}
 
 		.side {
-			font: font_weight(boldest) font_size(f60) font(base_font);
+			font: font_weight(boldest) font_size(f60) font(lined_font);
 			text-transform: uppercase;
 			text-align: center;
 			z-index: 1;
@@ -357,7 +353,7 @@ button,
 		transition: $trans_default;
 
 		path {
-			fill: none;
+			fill: color(_gray);
 			stroke: color(_gray);
 			stroke-width: 0.2;
 		}
@@ -535,9 +531,9 @@ button,
 #site-footer {
 	width: 100%;
 
-	&.absolute {
-		position: absolute;
-		bottom: 0;
+	&.relative {
+		position: relative;
+		bottom: -44px;
 	}
 
 	@include flex(center, center, row);

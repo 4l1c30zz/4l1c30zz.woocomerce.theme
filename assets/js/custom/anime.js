@@ -51,39 +51,6 @@ function bck_morph(){
     loop: false
   });
 }
-function logo_anim(){
-  anime({
-    targets: '#logo .symbol',
-    strokeDashoffset: [anime.setDashoffset, 0],
-    easing: 'easeInOutSine',
-    duration: 2500,
-    delay: function(el, i) { return i * 250 },
-    direction: 'normal',
-    loop: false,
-      delay: 1500
-  });
-  anime({
-    targets:'#logo .symbol',
-    fill: ['none', '#1a181b'],
-    easing: 'easeInOutQuad',
-    delay: 2500
-  });
-  anime({
-    targets: '#logo .circle',
-    strokeDashoffset: [anime.setDashoffset, 0],
-    easing: 'easeInOutSine',
-    duration: 1500,
-    delay: 1500,
-    direction: 'normal',
-    loop: false
-  });
-  anime({
-    targets:'#logo .circle',
-    fill: ['none', '#1a181b'],
-    easing: 'easeInOutQuad',
-    delay: 2200
-  });
-}
 
 (function(){
     let disable = document.getElementById("loader");
@@ -93,14 +60,12 @@ function logo_anim(){
     setTimeout(function(){
     disable.remove();
     bck_morph();
-    logo_anim();
     }, 5000);
   }
   else{
     Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
           disable.remove();
           bck_morph();
-          logo_anim();
         });
   }
 })();

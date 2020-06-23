@@ -1,7 +1,5 @@
 "use strict";
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var tl = anime.timeline({
   targets: '#load',
   delay: function delay(el, i) {
@@ -54,41 +52,6 @@ function bck_morph() {
   });
 }
 
-function logo_anim() {
-  anime(_defineProperty({
-    targets: '#logo .symbol',
-    strokeDashoffset: [anime.setDashoffset, 0],
-    easing: 'easeInOutSine',
-    duration: 2500,
-    delay: function delay(el, i) {
-      return i * 250;
-    },
-    direction: 'normal',
-    loop: false
-  }, "delay", 1500));
-  anime({
-    targets: '#logo .symbol',
-    fill: ['none', '#1a181b'],
-    easing: 'easeInOutQuad',
-    delay: 2500
-  });
-  anime({
-    targets: '#logo .circle',
-    strokeDashoffset: [anime.setDashoffset, 0],
-    easing: 'easeInOutSine',
-    duration: 1500,
-    delay: 1500,
-    direction: 'normal',
-    loop: false
-  });
-  anime({
-    targets: '#logo .circle',
-    fill: ['none', '#1a181b'],
-    easing: 'easeInOutQuad',
-    delay: 2200
-  });
-}
-
 (function () {
   var disable = document.getElementById("loader");
   var home = document.querySelector('body.home');
@@ -97,7 +60,6 @@ function logo_anim() {
     setTimeout(function () {
       disable.remove();
       bck_morph();
-      logo_anim();
     }, 5000);
   } else {
     Promise.all(Array.from(document.images).filter(function (img) {
@@ -109,7 +71,6 @@ function logo_anim() {
     })).then(function () {
       disable.remove();
       bck_morph();
-      logo_anim();
     });
   }
 })(); //menu animation
@@ -195,7 +156,7 @@ function footerStickToBottom() {
   console.log(bodyHeight);
 
   if (bodyHeight < 950) {
-    document.querySelector("#site-footer").classList.add("absolute");
+    document.querySelector("#site-footer").classList.add("relative");
   }
 }
 

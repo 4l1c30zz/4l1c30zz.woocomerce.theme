@@ -80,7 +80,13 @@
 	}
 
 
-	/*woo styles`*/
+    /*woo styles`*/
+    ul.products {
+        width: 100%;
+        li.product{
+            text-align: center;
+        }
+    }
 	.wc-block-grid.has-3-columns .wc-block-grid__product {
 		flex-basis: 50%;
 		max-width: 50%;
@@ -298,7 +304,7 @@
 
 @media screen and (max-width:768px) {
 	#site-footer {
-		&.absolute {
+		&.relative {
 			position: relative;
 			bottom: -30px;
         }

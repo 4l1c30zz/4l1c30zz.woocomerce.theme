@@ -223,8 +223,7 @@ h3{font:900 21px "Montserrat Subrayada"}
 h4{font:900 20px "Montserrat Subrayada"}
 p{line-height:1.2em;margin-bottom:10px;font:inherit}
 .home h2{margin-bottom:40px}
-.hero_heading{margin:100px auto 50px;font-size:185px;text-shadow:0 0 0 cyan,0 0 0 yellow,0 0 0 black;-webkit-animation:color_shadow .1s ease forwards alternate 10 7s;animation:color_shadow .1s ease forwards alternate 10 7s;padding:0 20px}
-.hero_heading:hover{-webkit-animation:color_shadow .1s ease forwards alternate infinite;animation:color_shadow .1s ease forwards alternate infinite}
+.hero_heading{margin:100px auto 50px;font-size:185px;text-shadow:0 0 0 cyan,0 0 0 yellow,0 0 0 black;-webkit-animation:color_shadow .1s ease forwards alternate 25 5s;animation:color_shadow .1s ease forwards alternate 25 5s;padding:0 20px}
 button,.button,.home_btn a{border-radius:0;padding:5px 10px;background:#1a181b;border:0;color:#fff;font:900 18px "Montserrat Subrayada";-webkit-transition:all .3s ease;transition:all .3s ease}
 .breadcrumbs{margin:0 auto 10px;-ms-flex-preferred-size:100%;flex-basis:100%;text-align:center;font-weight:600}
 .wp-embedded-content{width:100%;min-height:100vh}
@@ -237,11 +236,11 @@ button,.button,.home_btn a{border-radius:0;padding:5px 10px;background:#1a181b;b
 .hero{margin:40px 0 20px}
 .characters_block{width:100%;background:#ec008c;padding:10px;font:900 3em "Montserrat Subrayada";-ms-flex-preferred-size:100%;flex-basis:100%}
 #loader{display:none}
-#loader.a{display:none !important;position:fixed;background:#fff;z-index:999;top:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100vw;height:100vh}
+#loader.a{position:fixed;background:#fff;z-index:999;top:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100vw;height:100vh}
 #loader.a #load{z-index:1;background:#ec008c;width:200px;height:200px;position:absolute;top:25%;border-radius:0;-webkit-transform:rotate(0);transform:rotate(0)}
 #loader.a .inner{max-width:80vw;z-index:2;overflow:hidden;margin:0 auto;-ms-flex-preferred-size:100%;flex-basis:100%}
-#loader.a p{white-space:nowrap;font:900 100px "Montserrat";padding:10px;text-transform:uppercase;position:relative;right:0}
-#loader.a .side{font:900 60px "Montserrat";text-transform:uppercase;text-align:center;z-index:1;position:relative;-ms-flex-preferred-size:100%;flex-basis:100%}
+#loader.a p{white-space:nowrap;font:900 100px "Montserrat Subrayada";padding:10px;text-transform:uppercase;position:relative;right:0}
+#loader.a .side{font:900 60px "Montserrat Subrayada";text-transform:uppercase;text-align:center;z-index:1;position:relative;-ms-flex-preferred-size:100%;flex-basis:100%}
 #loader.a .txt_wrap{max-width:70vw}
 #morph{width:100%;height:90vh;top:0;left:0;pointer-events:none;position:absolute}
 #morph .morph{fill:#ec008c}
@@ -256,7 +255,7 @@ button,.button,.home_btn a{border-radius:0;padding:5px 10px;background:#1a181b;b
 #site_header .cont_wrap{max-width:1200px;margin:0 auto;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;padding:20px 50px;top:3%;width:100%;left:0;right:0;z-index:999}
 #site_header .logo{width:40%}
 #site_header #logo{max-width:90px;position:relative;-webkit-transition:all .3s ease;transition:all .3s ease}
-#site_header #logo path{fill:none;stroke:#1a181b;stroke-width:.2}
+#site_header #logo path{fill:#1a181b;stroke:#1a181b;stroke-width:.2}
 #site_header #logo nav{width:60%}
 #site_header.mob .header_nav{background:#ec008c}
 #site_header .header_nav{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-pack:distribute;justify-content:space-around;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
@@ -283,7 +282,7 @@ button,.button,.home_btn a{border-radius:0;padding:5px 10px;background:#1a181b;b
 #main{position:relative;max-width:1200px;margin:0 auto;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 .mail_link{font:700 20px "Montserrat Subrayada";margin:5px auto 10px;display:block;-ms-flex-preferred-size:100%;flex-basis:100%;text-align:center}
 #site-footer{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap}
-#site-footer.absolute{position:absolute;bottom:0}
+#site-footer.relative{position:relative;bottom:-44px}
 #site-footer .foot_logo path{fill:#1a181b;stroke:#1a181b}
 #site-footer .logo{text-align:center}
 #site-footer .logo svg{max-width:100px;margin-right:40px;min-width:90px}
@@ -346,6 +345,8 @@ h2{font-size:60px}
 #site_header nav{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}
 #site_header li a{font-size:18px;padding:5px}
 #site_header .cart{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1;position:absolute;right:5%}
+ul.products{width:100%}
+ul.products li.product{text-align:center}
 .wc-block-grid.has-3-columns .wc-block-grid__product{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}
 .archive .products.columns-3{-ms-flex-preferred-size:100%;flex-basis:100%}
 .archive .products.columns-3 li{-ms-flex-preferred-size:calc(50% - 20px);flex-basis:calc(50% - 20px)}
@@ -380,7 +381,7 @@ h2{font-size:60px}
 .wp-block-latest-posts.is-grid>li{width:100%;-ms-flex-preferred-size:calc(50% - 40px);flex-basis:calc(50% - 40px);margin:10px}
 .blog .post_grid>div,.tax-proj_cat .post_grid>div,.category .post_grid>div{padding:0}
 #site-footer .logo svg{max-width:80px}
-}@media screen and (max-width:768px){#site-footer.absolute{position:relative;bottom:-30px}
+}@media screen and (max-width:768px){#site-footer.relative{position:relative;bottom:-30px}
 #site-footer .logo svg{max-width:50px}
 h1{font-size:50px}
 h2{font-size:30px}
