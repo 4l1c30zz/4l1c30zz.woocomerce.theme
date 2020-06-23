@@ -198,7 +198,12 @@ body.woocommerce-page {
 		@include flex(center, center, row);
 		flex-basis: 100%;
 		order: 1;
-
+		.woocommerce-product-gallery__wrapper img{
+				object-fit: contain;
+				max-height: 72vh;
+			  
+			    
+		}
 		>div {
 			display: block;
 			margin-bottom: 30px;
@@ -219,7 +224,6 @@ body.woocommerce-page {
 
 			li {
 				margin: 5px;
-				border: 3px solid color(_gray);
 
 				img {
 					height: 100%;
@@ -474,8 +478,8 @@ body.woocommerce-page {
 		}
 
 		ul>li img {
-			max-height: 250px;
-			object-fit: cover;
+			max-height: 300px;
+			object-fit: contain;
 		}
 
 		ul>li h2 {
@@ -606,7 +610,7 @@ body.woocommerce-page {
 
 		li img {
 			max-height: 250px;
-			object-fit: cover;
+			object-fit: contain;
 		}
 
 		.woocommerce-loop-product__title {

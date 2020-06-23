@@ -243,7 +243,6 @@ add_action( 'after_setup_theme', 'theme_woocommerce_support' );
 //enable default woo gallery , zoom  and slider
 add_theme_support( 'wc-product-gallery-lightbox' );
 add_theme_support( 'wc-product-gallery-slider' );
-add_theme_support( 'wc-product-gallery-zoom' );
 //disable default woo styles
 add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 //woo single change title_
