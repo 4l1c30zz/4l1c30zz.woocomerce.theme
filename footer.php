@@ -1,5 +1,5 @@
 </div>
- <footer id="site_fotter">
+ <footer id="site-footer">
 
    <div class="logo">
        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -9,9 +9,9 @@
            </svg>
        </a>
    </div>
+    <div class="has-text-align-center characters_block">{!%@#”/~%&amp;?}</div>
 
     </footer>
-    <div class="has-text-align-center characters_block">{!%@#”/~%&amp;?}</div>
 
 <div id="loader" class="a">
 <div id="load">

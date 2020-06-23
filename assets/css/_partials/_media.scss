@@ -29,18 +29,15 @@
     h2 {
         font-size: font_size(f60);
     }
-    #main #development {
-        margin: 0 auto 20px;
+
+#site-footer {
+	
+
+	&.absolute {
+		position: relative;
+		bottom: 0;
     }
-    .glitch_title {
-        font-size: font_size(f80);
-        min-height: 135px;
-        span {
-            display: block;
-            text-align: center;
-            width: 100%;
-        }
-    }
+}
     #site_header {
         .cont_wrap {
             flex-direction: column;
@@ -68,7 +65,7 @@
         }
     }
 
- 
+
     /*woo styles`*/
     .wc-block-grid.has-3-columns .wc-block-grid__product {
         flex-basis: 50%;
@@ -265,9 +262,7 @@
         margin-top: 8em;
     }
     #site_header {
-        position: absolute;
-        z-index: 99;
-        top: 0;
+
         .cart{
             .inner_cart_wrap{
                 min-width: 80vw;
@@ -328,6 +323,7 @@
             font-size: font_size(f40);
         }
     }
+
     #site_fotter .logo svg {
         max-width: 80px;
         margin: 0 auto;
@@ -466,9 +462,6 @@
         max-width: 80%;
     }
 
-    .archive #main, .blog #main {
-        margin-top: 7em;
-    }
     .blog,
     .archive,
     .single {

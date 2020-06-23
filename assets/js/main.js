@@ -181,19 +181,34 @@ caseElems.forEach(function (caseElem) {
 });
 "use strict";
 
-//sticky header
 window.onscroll = function () {
   stick();
 };
 
+window.resize = function () {
+  footerStickToBottom();
+  stick();
+};
+
+function footerStickToBottom() {
+  var bodyHeight = document.body.scrollHeight;
+
+  if (bodyHeight < 950) {
+    document.querySelector("#site-footer").classList.add("absolute");
+  }
+}
+
 function stick() {
+  var bodyHeight = document.body.scrollHeight;
   var head = document.getElementById("site_header");
   var elem_height = head.offsetHeight;
 
-  if (window.pageYOffset >= elem_height) {
-    head.classList.add("a");
-  } else {
-    head.classList.remove("a");
+  if (bodyHeight > 1300) {
+    if (window.pageYOffset >= elem_height) {
+      head.classList.add("a");
+    } else {
+      head.classList.remove("a");
+    }
   }
 }
 
@@ -204,6 +219,8 @@ nav_toggle.addEventListener('click', function (event) {
 });
 
 (function () {
+  stick();
+  footerStickToBottom();
   var elementExists = document.querySelector(".summary.entry-summary");
 
   if (typeof elementExists != 'undefined' && elementExists != null) {

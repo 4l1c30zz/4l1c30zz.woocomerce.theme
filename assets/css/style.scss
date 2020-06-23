@@ -25,7 +25,7 @@ html {
 
 body {
 	font: font_weight(regular) font_size(f16) font(base_font);
-	min-height: 125vh;
+	position: relative;
 	width: 100%;
 	color: color(_gray);
 	overflow: auto;
@@ -33,6 +33,7 @@ body {
 	scrollbar-color: color(_magenta) color(_black);
 	overflow-y: auto;
 	overflow-x: hidden;
+	min-height: 100vh;
 }
 
 body::-webkit-scrollbar {
@@ -163,6 +164,7 @@ button,
 	background: color(_magenta);
 	padding: 10px;
 	font: font_weight(boldest) 3em font(lined_font);
+	flex-basis: 100%;
 }
 
 #loader {
@@ -224,7 +226,7 @@ button,
 
 #morph {
 	width: 100%;
-	height: 78%;
+	height: 90vh;
 	top: 0;
 	left: 0;
 	pointer-events: none;
@@ -485,7 +487,6 @@ button,
 	position: relative;
 	@include cont_width;
 	@include flex(center, center, column);
-	min-height: 95vh;
 
 
 	.mail_link a {
@@ -495,19 +496,17 @@ button,
 	}
 }
 
-#site_fotter {
-	padding: $cont_padd;
-	@include cont_width;
+#site-footer {
+width: 100%;
+&.absolute {
+	position: absolute;
+	bottom: 0;
+}
 	@include flex(center, center, row);
-
+	flex-wrap: wrap;
 	.foot_logo path {
 		fill: color(_gray);
 		stroke: color(_gray);
-	}
-
-	>div {
-		max-width: 33.33%;
-		@include flex(center, center, row);
 	}
 
 	.logo {
