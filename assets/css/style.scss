@@ -534,8 +534,9 @@ button,
 	position: relative;
 	z-index: 2;
 	&.absolute {
-		position: absolute;
+		position: relative;
 		bottom: 0;
+		margin-top: 40px;
 	}
 
 	@include flex(center, center, row);
