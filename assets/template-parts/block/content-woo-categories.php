@@ -9,6 +9,7 @@
 $prod_categories = get_terms( 'product_cat', array(
         'orderby'    => 'name',
         'order'      => 'ASC',
+        'parent' => 0,
         'hide_empty' => true
     ));
 ?>
