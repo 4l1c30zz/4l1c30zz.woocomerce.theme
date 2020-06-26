@@ -2,7 +2,9 @@
 
 	#main,
 	#site_header .cont_wrap {
+		width: 100%;
 		max-width: 90%;
+		padding: 20px 40px;
 	}
 
 	h2 {
@@ -312,16 +314,12 @@
 }
 
 @media screen and (max-width:768px) {
+	body:not(.home) #site-footer {
+		margin-top: 2em;
+	}
 	#site-footer {
 		&:not(.absolute) {
 			padding: 20px 0 0;
-		}
-
-
-		&.absolute {
-			position: relative;
-			bottom: -50px;
-			margin-top: 20px;
 		}
 
 		.logo svg {
