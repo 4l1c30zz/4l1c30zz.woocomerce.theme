@@ -2,21 +2,10 @@ window.onscroll = function () {
 	stick();
 };
 window.resize = function () {
-	footerStickToBottom();
 	stick();
 };
 
-function footerStickToBottom() {
-	let bodyHeight = document.body.scrollHeight;
 
-	if (bodyHeight < 950) {
-		document.querySelector("#site-footer").classList.add("absolute");
-
-
-	} else {
-		document.querySelector("#site-footer").classList.remove("absolute");
-	}
-}
 
 function stick() {
 	let bodyHeight = document.body.scrollHeight;
@@ -38,7 +27,7 @@ nav_toggle.addEventListener('click', (event) => {
 
 (function () {
 	stick();
-	footerStickToBottom();
+	
 	var elementExists = document.querySelector(".summary.entry-summary");
 	if (typeof (elementExists) != 'undefined' && elementExists != null) {
 		var newElem = document.createElement('div')

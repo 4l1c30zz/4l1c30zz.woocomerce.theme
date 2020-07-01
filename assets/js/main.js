@@ -147,19 +147,8 @@ window.onscroll = function () {
 };
 
 window.resize = function () {
-  footerStickToBottom();
   stick();
 };
-
-function footerStickToBottom() {
-  var bodyHeight = document.body.scrollHeight;
-
-  if (bodyHeight < 950) {
-    document.querySelector("#site-footer").classList.add("absolute");
-  } else {
-    document.querySelector("#site-footer").classList.remove("absolute");
-  }
-}
 
 function stick() {
   var bodyHeight = document.body.scrollHeight;
@@ -183,7 +172,6 @@ nav_toggle.addEventListener('click', function (event) {
 
 (function () {
   stick();
-  footerStickToBottom();
   var elementExists = document.querySelector(".summary.entry-summary");
 
   if (typeof elementExists != 'undefined' && elementExists != null) {

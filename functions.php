@@ -140,8 +140,6 @@ function wc_refresh_mini_cart_subtotal($fragments){
         $fragments['.woocommerce-mini-cart__total total'] = ob_get_clean();
     return $fragments;
 }
-
-
         $fragments['.mini-cart-list'] = ob_get_clean();
     return $fragments;
 }
@@ -252,6 +250,10 @@ function new_title() {
      the_title( '<h1 class="product_title entry-title">', '</h1>' );
 }
 
+//add title to cart & checkout
+add_action( 'woocommerce_before_cart', 'new_title', 10 );   
+add_action( 'woocommerce_before_checkout_form', 'new_title', 10 );    
+
 //remove add to cart from woo archive
 add_action( 'woocommerce_after_shop_loop_item', function(){
 	remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
@@ -272,6 +274,8 @@ if ( ! function_exists( 'woocommerce_template_single_title' ) ) {
 
     }
 }
+
+
 //blocks extensions for wp editor
 add_action('acf/init', 'my_acf_init');
 function my_acf_init() {
@@ -287,15 +291,6 @@ function my_acf_init() {
 			'icon'				=> 'admin-comments',
 			'keywords'			=> array( 'woo categories', 'smiley' ),
         ));
-        acf_register_block(array(
-			'name'				=> 'hero-animation',
-			'title'				=> __('hero animation'),
-			'description'		=> __('A woocomerce block'),
-			'render_callback'	=> 'acf_render_callback',
-			'category'			=> 'common',
-			'icon'				=> 'admin-comments',
-			'keywords'			=> array( 'hero animation', 'smiley' ),
-		));
 	}
 }
 function acf_render_callback( $block ) {

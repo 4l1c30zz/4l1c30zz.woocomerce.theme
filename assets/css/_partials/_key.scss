@@ -57,3 +57,16 @@
         transform: translate(-10%, -20%);
     }
 }
+@keyframes color_shadow {
+	0% {
+		text-shadow: 10px 0px 0 cyan, 5px -5px 0 black, -10px 0px 0 yellow;
+	}
+
+	50% {
+		text-shadow: 0px 5px 0 cyan, 0px 0px 0 black, 0px -5px 0 yellow;
+	}
+
+	100% {
+		text-shadow: -5px -10px 0 cyan, 3px -5px 0 black, 5px 10px 0 yellow;
+	}
+}
